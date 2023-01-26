@@ -45,6 +45,7 @@ gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails"
+gem 'optimist', '~> 3.0', '>= 3.0.1'
 
 # Use Sass to process CSS
 # gem "sassc-rails"

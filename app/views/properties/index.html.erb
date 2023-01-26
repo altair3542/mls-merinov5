@@ -1,0 +1,30 @@
+<div>
+
+  <h1>Propiedades</h1>
+
+<%= form_with url: import_properties_path, method: :post do |form| %>
+  <%= form.file_field :file, acept: ".csv" %>
+  <%= form.submit %>
+<% end %>
+
+
+<h1>Todas las viviendas</h1>
+
+<% @properties.each do |property| %>
+  <%= link_to property_path(property.id) do%>
+      <h1>
+        <%=property.web_title_es %>
+      </h1>
+  <% end %>
+      <h5>
+        <%= property.property_type %>
+      </h5>
+      <p>
+        $ <%= property.price_current %>
+      </p>
+      <h6>
+        <%= property.district %>, <%= property.map_area %>
+      </h6>
+
+<% end %>
+</div>
